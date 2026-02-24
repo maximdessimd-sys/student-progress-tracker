@@ -344,18 +344,22 @@ export default function IndexPage() {
 
           <h3>Doelen</h3>
           <ul>
-            {selectedStudent.goals.map((goal) => (
-                   <span
-              style={{
-                textDecoration: goal.done ? 'line-through' : 'none',
-                cursor: 'pointer'
-              }}
-              onClick={() => toggleGoal(goal.id)}
-            >
-              {goal.text} (deadline: {goal.deadline || 'geen'})
-            </span>
-              </li>
-            ))}
+        
+{selectedStudent.goals.map((goal) => (
+     )
+    <li key={goal.id}>
+    <span
+      style={{
+        textDecoration: goal.done ? 'line-through' : 'none',
+        cursor: 'pointer'
+      }}
+      onClick={() => toggleGoal(goal.id)}
+    >
+      {goal.text} (deadline: {goal.deadline || 'geen'})
+    </span>
+  </li>
+  
+)}
           </ul>
           <div>
             <h4>Nieuw doel</h4>
